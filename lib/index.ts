@@ -1,7 +1,7 @@
 import { DependencyTreeFetcher } from './internal/dependencyTreeFetcher';
 import { FetchOptions } from './fetchOptions';
 
-export default function getDependencyTreeFromNpm(packageName: string,
+export function getDependencyTreeFromNpm(packageName: string,
   packageVersion: string | null,
   options: FetchOptions,
   callback: Function) {

@@ -1,6 +1,6 @@
 {
   "name": "npm-fetch-dependencies",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A module that can be used to obtain dependency tree for packages from npm",
   "scripts": {
     "start": "node ./dist/index.js",

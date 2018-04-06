@@ -1,4 +1,4 @@
-import getDependencyTreeFromNpm from './../lib';
+import { getDependencyTreeFromNpm } from './../lib';
 
 /* Fetch depenencies for the mocha package, include the development only packages for root, and verbose logs */
 getDependencyTreeFromNpm("mocha", null, { verbose: true, includeDevelopmentPackages: true }, (tree: any) => {
