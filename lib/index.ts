@@ -18,3 +18,5 @@ export function getDependencyTreeFromNpm(packageName: string,
   
   fetcher.fetch();
 };
+
+export { FetchOptions };
