@@ -6,6 +6,9 @@ import { escape as qsEscape } from 'querystring';
 
 const NPM_REGISTRY_HOST = "registry.npmjs.org";
 
+/**
+ * The class that contains the logic of fetching a depdenecncy tree for a package.
+ */
 export class DependencyTreeFetcher {
   private _packageName: string;
   private _packageVersion: string | null;
@@ -15,6 +18,14 @@ export class DependencyTreeFetcher {
   private _tree: any;
   private _packageJsonCache: any;
 
+  /**
+    * @constructor
+    * @param {string} packageName - The name of the package to fetch the tree for
+    * @param {string} packageVersion - The version of the package to fetch the tree for (optional)
+    * @param {FetchOptions} optional - Fetch options
+    * @param {Function} callback - Callback function when finished
+    * 
+  */
   constructor(packageName: string,
     packageVersion: string | null,
     options: FetchOptions,
@@ -35,6 +46,9 @@ export class DependencyTreeFetcher {
     }
   }
 
+  /**
+    * Starts the fetching operation from npm registry
+  */
   public fetch() {
     this._tasksQueue.push({
       packageName: this._packageName,
